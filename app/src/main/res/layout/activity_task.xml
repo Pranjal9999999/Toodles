@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".TaskActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar_layout"
+        android:background="@color/white"
+        app:title="New Task"
+        app:titleTextColor="@color/black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:text="Task Title"
+        android:textColor="#D81B60"
+        android:textSize="21sp" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="#F12E90">
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHint="@color/black"
+            android:textSize="23sp"
+            android:inputType="text"
+            android:lines="3"
+
+            android:hint="Title"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textColor="#F12E90"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:text="What is to be done?"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+
+        app:boxStrokeColor="#F12E90">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHint="@color/black"
+            android:textSize="23sp"
+            android:inputType="text"
+            android:gravity="top"
+
+            android:hint="Enter description"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textColor="#F12E90"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:text="Set Reminder date and time"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="#F12E90"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHint="@color/black"
+            android:id="@+id/date_edt"
+            android:textSize="23sp"
+            android:inputType="text"
+            android:lines="3"
+            android:focusable="false"
+            android:hint="Set Date"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_calendar"
+            android:drawableTint="@color/fushia"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="#F12E90"
+
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColorHint="@color/black"
+            android:textSize="23sp"
+            android:inputType="text"
+
+            android:id="@+id/time_edt"
+            android:hint="Set Time"
+            android:clickable="true"
+            android:visibility="gone"
+            android:cursorVisible="false"
+            android:drawableRight="@drawable/ic_time"
+            android:focusable="false"
+            android:drawableTint="@color/fushia"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="6dp"
+
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="#F12E90"
+            android:id="@+id/add_category"
+            android:src="@drawable/ic_add_category"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_task"
+        android:textColor="@color/white"
+        android:backgroundTint="#F12E90"
+        android:layout_gravity="end"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="8dp"
+        app:cornerRadius="15dp"/>
+
+
+</LinearLayout>

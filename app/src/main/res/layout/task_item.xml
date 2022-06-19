@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:padding="10dp"
+    android:layout_margin="1dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/show_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/show_category"
+            android:padding="1dp"
+            android:text="@string/task_title"
+            android:textColor="#303030"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/show_title"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:text="@string/task_subtitle"
+            android:textSize="16sp"
+            android:id="@+id/show_task"
+            />
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_category"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_alignParentEnd="true"
+            android:text="Category"/>
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textdate"
+            android:layout_below="@+id/show_task"
+            android:text="Date"
+
+            android:textSize="12sp"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textdate"
+            android:text="12-06-22"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/show_task"
+            android:id="@+id/texttime"
+            android:textSize="12sp"
+            android:text="Time"/>
+        <TextView
+            android:padding="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_time"
+            android:layout_below="@id/texttime"
+            android:layout_alignParentEnd="true"
+            android:text="12:00 am"
+            android:textColor="@color/black"
+            android:lines="1"/>
+
+
+
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
